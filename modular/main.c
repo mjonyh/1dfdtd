@@ -3,23 +3,27 @@
 int main(){
 	Grid *g;
 
-	printf("[Init]: Allocation. \n");
+	printf("This FDTD module can be used to simulate the propagation \n"); 
+	printf("of a gaussian EM-wave of the form \n\n");
+	printf("exp[-{(time-delay-location/cdtds)/width}^2] \n\n");
+
+	//printf("[Init]: Allocation. \n");
 
 	ALLOC_1D(g, 1, Grid);		// allocate memory for grid
 
-	printf("[Init]: Grid. \n");
+	//printf("[Init]: Grid. \n");
 	gridInit(g);
-	printf("[Init]: ABC. \n");
+	//printf("[Init]: ABC. \n");
 	abcInit(g);
-	printf("[Init]: TFSF. \n");
+	//printf("[Init]: TFSF. \n");
 	tfsfInit(g);
-	printf("[Init]: Snapshot. \n");
+	//printf("[Init]: Snapshot. \n");
 	snapshotInit(g);
 
-	printf("Initialization complete. \n \n");
+	//printf("Initialization complete. \n \n");
 
 	/* do time stepping */
-	printf("Starting time step. \n \n");
+	//printf("Starting time step. \n \n");
 
 	for (Time = 0; Time < MaxTime; Time++){
 		//printf("%d. ", Time);

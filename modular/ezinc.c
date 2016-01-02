@@ -6,10 +6,10 @@ static double delay = 30, width = 10, cdtds;
 /* promt user for source-function width and delay */
 void ezIncInit(Grid *g){
 	cdtds = Cdtds;
-	//printf("Enter delay: ");
-	//scanf("%lf", &delay);
-	//printf("Enter width: ");
-	//scanf("%lf", &width);
+	printf("Enter delay: ");
+	scanf("%lf", &delay);
+	printf("Enter width: ");
+	scanf("%lf", &width);
 
 	return;
 }

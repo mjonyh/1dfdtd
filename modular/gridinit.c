@@ -1,15 +1,15 @@
 #include "fdtd.h"
 
-#define LOSS 0.02
-#define LOSS_LAYER 180		// node at which lossy layer starts
+#define LOSS 0.01
+#define LOSS_LAYER 380		// node at which lossy layer starts
 #define EPSR 9.0
 
 void gridInit(Grid *g){
 	double imp0 = 377.0;
 	int mm;
 
-	SizeX = 200;
-	MaxTime = 450;
+	SizeX = 1000;
+	MaxTime = 2000;
 	Cdtds = 1.0;
 
 	ALLOC_1D(g->ez, SizeX, double);

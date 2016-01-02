@@ -7,8 +7,8 @@ static int temporalStride = 2, spatialStride = 1, startTime = 0, startNode = 1, 
 void snapshotInit(Grid *g){
 	printf("for the snapshots: \n");
 	printf(" Duration of simulation is %d steps. \n", MaxTime);
-	//printf(" Enter start time and temporal stride: ");
-	//scanf(" %d %d", &startTime, &temporalStride);
+	printf(" Enter start time and temporal stride: ");
+	scanf(" %d %d", &startTime, &temporalStride);
 	printf(" Grid has %d total nodes (ranging from 0 to %d). \n", SizeX, SizeX-1);
 	//printf(" Enter the base name: ");
 	//scanf(" %s", basename);
@@ -20,6 +20,8 @@ void snapshot(Grid *g){
 	int mm;
 	char filename[100];
 	FILE *snapshot;
+
+	endNode = SizeX-2;
 
 	/* ensure temporal stride set to a reasonable value */
 	if (temporalStride <= 0){
