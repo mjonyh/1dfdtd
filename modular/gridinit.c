@@ -24,7 +24,7 @@ void gridInit(Grid *g){
 		if (mm < 100){
 			Ceze(mm) = 1.0;
 			Cezh(mm) = imp0;
-		} 
+		}
 		else if (mm < LOSS_LAYER) {
 			Ceze(mm) = 1.0;
 			Cezh(mm) = imp0/EPSR;
@@ -33,7 +33,7 @@ void gridInit(Grid *g){
 			Ceze(mm) = (1.0 - LOSS)/(1.0 + LOSS);
 			Cezh(mm) = imp0 / EPSR / (1.0 + LOSS);
 		}
-	
+
 	/* set magnetic-field update coefficients */
 	for (mm = 0; mm < SizeX - 1; mm++)
 		if (mm < LOSS_LAYER){
@@ -44,6 +44,6 @@ void gridInit(Grid *g){
 			Chyh(mm) = (1.0 - LOSS)/(1.0 + LOSS);
 			Chye(mm) = 1.0 / imp0 / (1.0 + LOSS);
 		}
-	
+
 	return;
 }
